@@ -115,68 +115,47 @@ const PricingSection = () => {
             </motion.p>
             
             <InvestmentBlock as={motion.div} variants={itemVariants}>
-              <PriceOld>1,400,000 ₽</PriceOld>
-              <PriceTag>980,000 ₽</PriceTag>
+              <PriceOld>9 000 000 ₽</PriceOld>
+              <PriceTag>6 500 000 ₽</PriceTag>
               <motion.p variants={itemVariants}>
-                <HighlightText>Скидка 30%</HighlightText> при запуске до конца квартала
+                <HighlightText>Экономия 2 500 000 ₽</HighlightText> при передаче проекта в наш R&D-отдел
               </motion.p>
             </InvestmentBlock>
             
             <PricingGrid>
               <PricingCard as={motion.div} variants={itemVariants} whileHover={{ y: -10 }}>
-                <PricingTitle>Разработка</PricingTitle>
-                <ul>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> Full-stack команда
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> Front-end / Back-end
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> 3D моделлеры
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> AI специалист
-                  </PricingFeature>
-                </ul>
+                <PricingTitle>40%</PricingTitle>
+                <PricingFeature>
+                  <PricingIcon>💸</PricingIcon> Старт разработки
+                </PricingFeature>
               </PricingCard>
               
               <PricingCard as={motion.div} variants={itemVariants} whileHover={{ y: -10 }}>
-                <PricingTitle>Инфраструктура</PricingTitle>
-                <ul>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> Хостинг и домен
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> CDN для ассетов
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> Базы данных
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> WebSocket сервера
-                  </PricingFeature>
-                </ul>
+                <PricingTitle>30%</PricingTitle>
+                <PricingFeature>
+                  <PricingIcon>💻</PricingIcon> После демо версии
+                </PricingFeature>
               </PricingCard>
               
               <PricingCard as={motion.div} variants={itemVariants} whileHover={{ y: -10 }}>
-                <PricingTitle>Поддержка</PricingTitle>
-                <ul>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> 3 месяца после запуска
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> Исправление багов
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> Техническая поддержка
-                  </PricingFeature>
-                  <PricingFeature>
-                    <PricingIcon>✓</PricingIcon> Мониторинг системы
-                  </PricingFeature>
-                </ul>
+                <PricingTitle>30%</PricingTitle>
+                <PricingFeature>
+                  <PricingIcon>🚀</PricingIcon> После сдачи проекта
+                </PricingFeature>
               </PricingCard>
             </PricingGrid>
+            
+            <motion.div variants={itemVariants} style={{ marginTop: '30px' }}>
+              <p>
+                <HighlightText>При передаче проекта в наш R&D-отдел вы получаете:</HighlightText>
+              </p>
+              <ul style={{ marginTop: '15px', textAlign: 'left', paddingLeft: '20px' }}>
+                <li>Более быстрые сроки реализации</li>
+                <li>Применение передовых методов ИИ и веб-графики</li>
+                <li>Вовлечение в креативный процесс разработки</li>
+                <li>Экономию в размере 2 500 000 ₽</li>
+              </ul>
+            </motion.div>
           </GlassCard>
         </motion.div>
       </Container>

@@ -127,7 +127,7 @@ const Footer = () => {
             <h4>Социальные сети</h4>
             <SocialLinks>
               <SocialLink 
-                href="https://t.me/nikmcfly" 
+                href="https://t.me/sapientweb" 
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ y: -5, backgroundColor: 'rgba(59, 130, 246, 1)' }}

@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 import GlobalStyles from './styles/GlobalStyles';
 
 // Импорт компонентов
-import Header from './components/Header';
 import TitleSlide from './components/TitleSlide';
 import ConceptSection from './components/ConceptSection';
 import FeaturesSection from './components/FeaturesSection';
@@ -27,7 +26,6 @@ function App() {
       
       <GlobalStyles />
       
-      <Header />
       <TitleSlide />
       <ConceptSection />
       <FeaturesSection />

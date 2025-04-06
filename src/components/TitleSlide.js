@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { Container, CtaPrimary, UiScreenshots, UiScreenshot } from '../styles/StyledComponents';
 
-// Импорты плейсхолдеров изображений UI
-import { UI_SCREENSHOT_1, UI_SCREENSHOT_2 } from '../assets/placeholder';
-
 // Стилизованные компоненты
 const TitleSlideWrapper = styled.section`
   width: 100%;
@@ -97,6 +94,23 @@ const Particle = styled.div`
   height: ${props => props.size}px;
   left: ${props => props.left}%;
   top: ${props => props.top}%;
+`;
+
+// Обновленный компонент UiScreenshot с внешними размерами
+const CustomUiScreenshot = styled(motion.img)`
+  width: 45%;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 15px;
+  box-shadow: var(--vtc-shadow);
+  transition: all 0.3s ease;
+  
+  @media (max-width: 768px) {
+    width: 90%;
+    margin: 10px auto;
+  }
 `;
 
 // Основной компонент
@@ -259,16 +273,16 @@ const TitleSlide = () => {
         </HeroSubtitle>
         
         <UiScreenshots>
-          <UiScreenshot 
-            src={UI_SCREENSHOT_1} 
+          <CustomUiScreenshot 
+            src="/ui2.png" 
             alt="UI Виртуального торгового центра" 
             variants={screenshotVariants}
             initial="hidden"
             animate="visible"
             whileHover="hover"
           />
-          <UiScreenshot 
-            src={UI_SCREENSHOT_2} 
+          <CustomUiScreenshot 
+            src="/vtc-ui-2.png" 
             alt="Интерфейс виртуального магазина" 
             variants={screenshotVariants}
             initial="hidden"
