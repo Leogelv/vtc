@@ -1,33 +1,39 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { SectionTitle, SectionSubtitle } from '../styles/StyledComponents';
+import { SectionTitle, SectionSubtitle, GlassCard } from '../styles/StyledComponents';
 
 const TeamSection = () => {
   const teamMembers = [
     {
       role: 'Project Manager',
-      description: 'Опытный руководитель проектов с 8-летним стажем в e-commerce. Успешно запустил 5+ крупных торговых площадок.'
+      description: 'Опытный руководитель проектов с 8-летним стажем в e-commerce. Успешно запустил 5+ крупных торговых площадок.',
+      icon: 'fas fa-tasks'
     },
     {
       role: 'Lead UX/UI Designer',
-      description: 'Дизайнер с фокусом на e-commerce платформы. Создает интуитивные интерфейсы, повышающие конверсию.'
+      description: 'Дизайнер с фокусом на e-commerce платформы. Создает интуитивные интерфейсы, повышающие конверсию.',
+      icon: 'fas fa-paint-brush'
     },
     {
       role: 'Lead Frontend Developer',
-      description: 'Full-stack разработчик с глубокой экспертизой в React и современных веб-технологиях.'
+      description: 'Full-stack разработчик с глубокой экспертизой в React и современных веб-технологиях.',
+      icon: 'fas fa-code'
     },
     {
       role: 'Backend Team Lead',
-      description: 'Архитектор высоконагруженных систем. Эксперт по масштабируемым микросервисным архитектурам.'
+      description: 'Архитектор высоконагруженных систем. Эксперт по масштабируемым микросервисным архитектурам.',
+      icon: 'fas fa-database'
     },
     {
       role: 'DevOps Engineer',
-      description: 'Специалист по автоматизации и CI/CD. Обеспечивает бесперебойную работу инфраструктуры.'
+      description: 'Специалист по автоматизации и CI/CD. Обеспечивает бесперебойную работу инфраструктуры.',
+      icon: 'fas fa-server'
     },
     {
       role: 'Business Analyst',
-      description: 'Эксперт по анализу бизнес-процессов в e-commerce. Помогает оптимизировать работу платформы.'
+      description: 'Эксперт по анализу бизнес-процессов в e-commerce. Помогает оптимизировать работу платформы.',
+      icon: 'fas fa-chart-line'
     }
   ];
 
@@ -47,11 +53,11 @@ const TeamSection = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             whileHover={{ 
               y: -5,
-              boxShadow: '0 10px 30px rgba(0,0,0,0.1)'
+              boxShadow: '0 15px 30px rgba(0, 0, 0, 0.3)'
             }}
           >
             <RoleIcon>
-              <i className={getRoleIcon(member.role)} />
+              <i className={member.icon} />
             </RoleIcon>
             <MemberInfo>
               <MemberRole>{member.role}</MemberRole>
@@ -62,19 +68,6 @@ const TeamSection = () => {
       </TeamGrid>
     </TeamSectionWrapper>
   );
-};
-
-// Функция для определения иконки роли
-const getRoleIcon = (role) => {
-  const icons = {
-    'Project Manager': 'fas fa-tasks',
-    'Lead UX/UI Designer': 'fas fa-paint-brush',
-    'Lead Frontend Developer': 'fas fa-code',
-    'Backend Team Lead': 'fas fa-database',
-    'DevOps Engineer': 'fas fa-server',
-    'Business Analyst': 'fas fa-chart-line'
-  };
-  return icons[role] || 'fas fa-user';
 };
 
 const TeamSectionWrapper = styled.section`
@@ -91,14 +84,13 @@ const TeamGrid = styled.div`
   padding: 0 20px;
 `;
 
-const TeamMemberCard = styled(motion.div)`
-  background: white;
-  border-radius: 15px;
-  padding: 25px;
+const TeamMemberCard = styled(GlassCard)`
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  margin-bottom: 0;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 `;
 
 const RoleIcon = styled.div`
@@ -106,12 +98,13 @@ const RoleIcon = styled.div`
   height: 50px;
   min-width: 50px;
   border-radius: 12px;
-  background: var(--vtc-accent);
+  background: var(--vtc-gradient);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.5rem;
+  box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 `;
 
 const MemberInfo = styled.div`
@@ -119,6 +112,7 @@ const MemberInfo = styled.div`
 `;
 
 const MemberRole = styled.h4`
+  font-family: 'Unbounded', sans-serif;
   font-size: 1.1rem;
   color: var(--vtc-text-primary);
   margin: 0 0 10px;
