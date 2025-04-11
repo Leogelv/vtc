@@ -35,6 +35,25 @@ export const SectionLine = styled.div`
   border-radius: 2px;
 `;
 
+// Заголовки секций
+export const SectionTitle = styled.h2`
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--vtc-text-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: 'Unbounded', sans-serif;
+`;
+
+export const SectionSubtitle = styled.p`
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--vtc-text-secondary);
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+`;
+
 // Карточки
 export const GlassCard = styled(motion.div)`
   background: rgba(30, 41, 59, 0.7);
