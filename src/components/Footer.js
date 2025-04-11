@@ -119,8 +119,8 @@ const Footer = () => {
           
           <FooterColumn>
             <h4>Контакты</h4>
-            <p>Телеграм: <ContactLink href="https://t.me/nikmcfly" target="_blank">@nikmcfly</ContactLink></p>
-            <p>Email: <ContactLink href="mailto:dev@vtc.market">dev@vtc.market</ContactLink></p>
+            <p>Телеграм: <ContactLink href="https://t.me/sapientweb" target="_blank">@nikmcfly</ContactLink></p>
+           
           </FooterColumn>
           
           <FooterColumn>

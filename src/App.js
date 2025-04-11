@@ -10,6 +10,7 @@ import WowFeaturesSection from './components/WowFeaturesSection';
 import TechStackSection from './components/TechStackSection';
 import TimelineSection from './components/TimelineSection';
 import PricingSection from './components/PricingSection';
+import TeamSection from './components/TeamSection';
 import Footer from './components/Footer';
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
       <WowFeaturesSection />
       <TechStackSection />
       <TimelineSection />
+      <TeamSection />
       <PricingSection />
       <Footer />
     </>

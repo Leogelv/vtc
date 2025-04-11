@@ -292,7 +292,7 @@ const TitleSlide = () => {
         </UiScreenshots>
         
         <CtaPrimary 
-          href="https://t.me/nikmcfly" 
+          href="https://t.me/sapientweb" 
           target="_blank"
           variants={ctaVariants}
           initial="hidden"
